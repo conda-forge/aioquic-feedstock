@@ -1,4 +1,4 @@
-{% set version = "1.2.0" %}
+{% set version = "0.9.25" %}
 
 package:
   name: aioquic
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/a/aioquic/aioquic-{{ version }}.tar.gz
-  sha256: f91263bb3f71948c5c8915b4d50ee370004f20a416f67fab3dcc90556c7e7199
+  sha256: 70795c78905326d855c2ae524072234aae586c789b81292e272d021e9b0430a3
 
 build:
   number: 0
@@ -21,12 +21,12 @@ requirements:
     - pip
   run:
     - certifi
-    - cryptography >=42.0.0
+    - cryptography
     - openssl
     - pylsqpack >=0.3.3,<0.4.0
-    - pyopenssl
+    - pyopenssl >=22
     - python
-    - service-identity >=24.1.0
+    - service-identity >=23.1.0
 
 test:
   source_files:

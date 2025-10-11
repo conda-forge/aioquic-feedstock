@@ -62,6 +62,7 @@ tests:
         - coverage
         - pip
         - pytest
+        - python ${{ python_min }}.*
     script:
       - pip check
       - coverage run --source=aioquic --branch -m pytest -vv --tb=long --color=yes -k "not connect_and_serve_ipv6"

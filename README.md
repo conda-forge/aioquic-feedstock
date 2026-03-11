@@ -3,11 +3,13 @@ About aioquic-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/aioquic-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/aiortc/aioquic
+Home: https://pypi.org/project/aioquic
 
 Package license: BSD-3-Clause
 
 Summary: An implementation of QUIC and HTTP/3
+
+Development: https://github.com/aiortc/aioquic
 
 Documentation: https://aioquic.readthedocs.io/
 

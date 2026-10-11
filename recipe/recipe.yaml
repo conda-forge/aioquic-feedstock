@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "1.4.0"
+  version: "1.5.0"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/aioquic/aioquic-${{ version }}.tar.gz
-  sha256: f8d4b1742a8ae6362ab037b34d5cbbdd3b5eafa9e186d3143e8f57d8d6ab5070
+  sha256: f765bd3c0792110f94cd945e9cac67255d0250875efb4eb4995305d9c55336af
 
 build:
   skip: is_abi3 and not is_python_min
@@ -41,7 +41,7 @@ requirements:
     - certifi
     - cryptography >=43.0.0
     - openssl
-    - pylsqpack >=0.3.3,<0.4.0
+    - pylsqpack >=1.0.0,<2.0.0
     - pyopenssl >=24
     - python
     - service-identity >=24.1.0

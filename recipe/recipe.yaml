@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "1.5.0"
+  version: "1.6.1"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/aioquic/aioquic-${{ version }}.tar.gz
-  sha256: f765bd3c0792110f94cd945e9cac67255d0250875efb4eb4995305d9c55336af
+  sha256: 9a10d20e69b5914d6fa034becb30ab75ef6a777a3f1b16623ca599e9291c0a5c
 
 build:
   skip: is_abi3 and not is_python_min

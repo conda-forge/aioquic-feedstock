@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "1.7.1"
+  version: "1.7.2"
   # https://github.com/conda-forge/cryptography-feedstock/issues/183
   python_check_max: ${{ "3.14" if target_platform == "linux-ppc64le" else "3.15" }}
   skip_any: |-
@@ -22,7 +22,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/aioquic/aioquic-${{ version }}.tar.gz
-  sha256: 3d7fca2e2d2a99948e515830270fa3378f01fe7d11e5a16e2bed3fefdad194c0
+  sha256: 4def7cb0a692dc12c995cc397a93f41b78cc30b7bf078769c3a3bb1ba9dcf362
 
 build:
   skip: is_abi3 and not is_python_min

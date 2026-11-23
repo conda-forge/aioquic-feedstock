@@ -42,24 +42,26 @@ requirements:
         - cross-python_${{ target_platform }}
   host:
     - pip
-    - python
     - setuptools >=70.1
     - if: is_abi3
       then:
         - python ${{ python_min }}.*
         - python-abi3
+      else:
+        - python
   run:
     - certifi
-    - cryptography >=43.0.0
+    - cryptography >=48.0.0
     - openssl
     - pylsqpack >=1.1.1,<2.0.0
     - pyopenssl >=24
-    - python
     - service-identity >=24.1.0
     - if: is_abi3
       then:
         - python >=${{ python_min }}
         - python-abi3
+      else:
+        - python
 
 tests:
   - package_contents:

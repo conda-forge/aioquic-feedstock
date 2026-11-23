@@ -3,8 +3,7 @@ schema_version: 1
 
 context:
   version: "1.9.1"
-  # https://github.com/conda-forge/cryptography-feedstock/issues/183
-  python_check_max: ${{ "3.14" if target_platform == "linux-ppc64le" else "3.15" }}
+  python_check_max: "3.15"
   skip_any: |-
     not-a-test
     connect_and_serve_ipv6
@@ -25,7 +24,11 @@ source:
   sha256: cba2660ebf9619703bc3f23b0a9dda52067ad94fcc4eb18c6ad9de30e49cf010
 
 build:
-  skip: is_abi3 and not is_python_min
+  skip:
+    - is_abi3 and not is_python_min
+    # a compatible `cryptography >=28` is no longer available
+    #   https://github.com/conda-forge/cryptography-feedstock/issues/183
+    - target_platform == "linux-ppc64le"
   number: 0
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check --check-build-dependencies
